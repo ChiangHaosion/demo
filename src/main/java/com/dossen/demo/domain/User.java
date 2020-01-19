@@ -2,6 +2,9 @@ package com.dossen.demo.domain;
 
 import lombok.*;
 
+/**
+ * @author Haosion
+ */
 @Setter
 @Getter
 @AllArgsConstructor
