@@ -1,7 +1,5 @@
 package com.dossen.demo;
 
-import com.dossen.demo.DemoApplication;
-import com.dossen.demo.service.IUserService;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -16,9 +14,6 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.context.WebApplicationContext;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-
-import static org.junit.Assert.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = DemoApplication.class)
@@ -49,7 +44,7 @@ public class UserControllerTest {
     //测试查询单个
     @Test
     public void listOne() throws Exception {
-        mvc.perform(MockMvcRequestBuilders.get("/user/listone")
+        mvc.perform(MockMvcRequestBuilders.get("/user/listone?id=2")
                 .contentType(MediaType.APPLICATION_JSON_UTF8)
                 .accept(MediaType.APPLICATION_JSON_UTF8)
         )

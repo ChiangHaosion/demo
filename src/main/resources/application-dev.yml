@@ -10,3 +10,6 @@ spring:
 mybatis:
   mapper-locations: classpath:com.dossen.demo.mapper/*Mapper.xml
   type-aliases-package: com.dossen.demo.domain
+#logging:
+#  level:
+#  file: F:/logging-boot.log
