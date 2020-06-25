@@ -11,6 +11,9 @@
     <insert id="insert" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
         insert into user (userName,passWord,realName) values (#{userName},#{passWord},#{realName});
     </insert>
+    <insert id="insertTodbb" parameterType="com.dossen.demo.domain.User">
+         insert into user (userName,passWord,realName) values (#{userName},#{passWord},#{realName});
+    </insert>
     <update id="update">
         update user set userName=#{userName},passWord=#{passWord},realName=#{realName} where id=#{id}
     </update>

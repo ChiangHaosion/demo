@@ -15,4 +15,6 @@ public interface UserMapper {
     int delete(Long id);
 
     int update(User user);
+
+    int insertTodbb(User user);
 }
